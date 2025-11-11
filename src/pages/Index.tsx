@@ -16,6 +16,13 @@ const Index = () => {
     premises: ''
   });
   const [price, setPrice] = useState<number | null>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const services = [
     {
@@ -76,6 +83,23 @@ const Index = () => {
     const total = Math.round(basePrice * area * premisesMultiplier);
     setPrice(total);
     toast.success('Стоимость рассчитана!');
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.name || !formData.phone) {
+      toast.error('Заполните имя и телефон');
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    setTimeout(() => {
+      toast.success('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+      setFormData({ name: '', phone: '', email: '', message: '' });
+      setIsSubmitting(false);
+    }, 1000);
   };
 
   return (
@@ -431,7 +455,7 @@ const Index = () => {
                 Свяжитесь с нами удобным способом
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card className="border-2">
                 <CardHeader>
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
@@ -464,6 +488,90 @@ const Index = () => {
                 </CardContent>
               </Card>
             </div>
+
+            <Card className="border-2">
+              <CardHeader>
+                <CardTitle className="text-3xl">Оставить заявку</CardTitle>
+                <CardDescription className="text-base">
+                  Заполните форму и мы свяжемся с вами в течение 15 минут
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <Label htmlFor="name" className="text-base">Ваше имя *</Label>
+                      <Input
+                        id="name"
+                        placeholder="Иван"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="mt-2"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="phone" className="text-base">Телефон *</Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        placeholder="+7 (999) 123-45-67"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        className="mt-2"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="email" className="text-base">Email</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="ivan@example.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="mt-2"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="message" className="text-base">Сообщение</Label>
+                    <textarea
+                      id="message"
+                      placeholder="Расскажите о проблеме или задайте вопрос..."
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="mt-2 w-full min-h-[120px] px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full text-lg"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Icon name="Loader2" size={20} className="mr-2 animate-spin" />
+                        Отправка...
+                      </>
+                    ) : (
+                      <>
+                        <Icon name="Send" size={20} className="mr-2" />
+                        Отправить заявку
+                      </>
+                    )}
+                  </Button>
+
+                  <p className="text-sm text-muted-foreground text-center">
+                    Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
+                  </p>
+                </form>
+              </CardContent>
+            </Card>
             
             <div className="mt-12 bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-8 md:p-12 text-white text-center">
               <h3 className="text-3xl md:text-4xl font-bold mb-4">Готовы начать?</h3>
