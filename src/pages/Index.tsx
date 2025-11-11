@@ -112,9 +112,9 @@ const Index = () => {
               <span className="text-2xl font-bold">Охотники за насекомыми</span>
             </div>
             <div className="hidden md:flex gap-6">
+              <a href="#about" className="hover:text-primary transition-colors">О компании</a>
               <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
               <a href="#calculator" className="hover:text-primary transition-colors">Калькулятор</a>
-              <a href="#about" className="hover:text-primary transition-colors">О компании</a>
               <a href="#guarantees" className="hover:text-primary transition-colors">Гарантии</a>
               <a href="#faq" className="hover:text-primary transition-colors">Вопросы</a>
               <a href="#contacts" className="hover:text-primary transition-colors">Контакты</a>
@@ -170,7 +170,57 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="services" className="py-16 md:py-24 bg-slate-50">
+      <section id="about" className="py-16 md:py-24 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">О компании ООО «Дез-сервис»</h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                Мы — профессиональная компания «Охотники за насекомыми», специализирующаяся на санитарной обработке помещений. 
+                Работаем на рынке более 10 лет и выполнили более 5000 заказов.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon name="Award" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-xl mb-1">Сертифицированные специалисты</h3>
+                    <p className="text-muted-foreground">Все наши сотрудники имеют необходимые лицензии и сертификаты</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon name="ShieldCheck" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-xl mb-1">Безопасные препараты</h3>
+                    <p className="text-muted-foreground">Используем только сертифицированные средства, безопасные для людей и животных</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon name="Clock" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-xl mb-1">Быстрое выполнение</h3>
+                    <p className="text-muted-foreground">Выезжаем на объект в день обращения, работаем круглосуточно</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="https://cdn.poehali.dev/projects/74ab87cf-986b-4dfd-b855-dc1f8e743769/files/0faeb724-5d6e-42ef-b265-393c9c972dc2.jpg" 
+                alt="Наше оборудование" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Наши услуги</h2>
@@ -214,7 +264,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="calculator" className="py-16 md:py-24 bg-white">
+      <section id="calculator" className="py-16 md:py-24 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
@@ -303,57 +353,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-16 md:py-24 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">О компании ООО «Дез-сервис»</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Мы — профессиональная компания «Охотники за насекомыми», специализирующаяся на санитарной обработке помещений. 
-                Работаем на рынке более 10 лет и выполнили более 5000 заказов.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Icon name="Award" size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-xl mb-1">Сертифицированные специалисты</h3>
-                    <p className="text-muted-foreground">Все наши сотрудники имеют необходимые лицензии и сертификаты</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Icon name="ShieldCheck" size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-xl mb-1">Безопасные препараты</h3>
-                    <p className="text-muted-foreground">Используем только сертифицированные средства, безопасные для людей и животных</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Icon name="Clock" size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-xl mb-1">Быстрое выполнение</h3>
-                    <p className="text-muted-foreground">Выезжаем на объект в день обращения, работаем круглосуточно</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://cdn.poehali.dev/projects/74ab87cf-986b-4dfd-b855-dc1f8e743769/files/0faeb724-5d6e-42ef-b265-393c9c972dc2.jpg" 
-                alt="Наше оборудование" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="guarantees" className="py-16 md:py-24 bg-white">
+      <section id="guarantees" className="py-16 md:py-24 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Наши гарантии</h2>
@@ -382,7 +382,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-16 md:py-24 bg-slate-50">
+      <section id="faq" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
@@ -446,7 +446,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-16 md:py-24 bg-white">
+      <section id="contacts" className="py-16 md:py-24 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
