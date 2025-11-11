@@ -85,7 +85,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Icon name="Shield" size={32} className="text-primary" />
-              <span className="text-2xl font-bold">СанЭксперт</span>
+              <span className="text-2xl font-bold">Охотники за насекомыми</span>
             </div>
             <div className="hidden md:flex gap-6">
               <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
@@ -96,7 +96,7 @@ const Index = () => {
               <a href="#contacts" className="hover:text-primary transition-colors">Контакты</a>
             </div>
             <Button 
-              onClick={() => window.location.href = 'tel:+79991234567'}
+              onClick={() => window.location.href = 'tel:+79503049007'}
               className="bg-accent hover:bg-accent/90"
             >
               <Icon name="Phone" size={18} className="mr-2" />
@@ -136,10 +136,10 @@ const Index = () => {
                 size="lg" 
                 variant="outline" 
                 className="border-2 border-white text-white hover:bg-white hover:text-secondary text-lg"
-                onClick={() => window.location.href = 'tel:+79991234567'}
+                onClick={() => window.location.href = 'tel:+79503049007'}
               >
                 <Icon name="Phone" size={20} className="mr-2" />
-                +7 (999) 123-45-67
+                +7 (950) 304-90-07
               </Button>
             </div>
           </div>
@@ -265,7 +265,7 @@ const Index = () => {
                       <Button 
                         size="lg" 
                         className="bg-accent hover:bg-accent/90"
-                        onClick={() => window.location.href = 'tel:+79991234567'}
+                        onClick={() => window.location.href = 'tel:+79503049007'}
                       >
                         <Icon name="Phone" size={20} className="mr-2" />
                         Позвонить и заказать
@@ -283,9 +283,9 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">О компании СанЭксперт</h2>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">О компании ООО «Дез-сервис»</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Мы — профессиональная компания, специализирующаяся на санитарной обработке помещений. 
+                Мы — профессиональная компания «Охотники за насекомыми», специализирующаяся на санитарной обработке помещений. 
                 Работаем на рынке более 10 лет и выполнили более 5000 заказов.
               </p>
               <div className="space-y-4">
@@ -441,8 +441,8 @@ const Index = () => {
                   <CardDescription className="text-lg">Звоните в любое время</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <a href="tel:+79991234567" className="text-2xl font-bold text-primary hover:underline">
-                    +7 (999) 123-45-67
+                  <a href="tel:+79503049007" className="text-2xl font-bold text-primary hover:underline">
+                    +7 (950) 304-90-07
                   </a>
                   <p className="text-muted-foreground mt-2">Работаем 24/7 без выходных</p>
                 </CardContent>
@@ -457,8 +457,8 @@ const Index = () => {
                   <CardDescription className="text-lg">Напишите нам письмо</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <a href="mailto:info@sanexpert.ru" className="text-2xl font-bold text-primary hover:underline">
-                    info@sanexpert.ru
+                  <a href="mailto:zhdanovrt@mail.ru" className="text-2xl font-bold text-primary hover:underline">
+                    zhdanovrt@mail.ru
                   </a>
                   <p className="text-muted-foreground mt-2">Ответим в течение часа</p>
                 </CardContent>
@@ -474,7 +474,7 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   className="bg-white text-primary hover:bg-white/90 text-lg"
-                  onClick={() => window.location.href = 'tel:+79991234567'}
+                  onClick={() => window.location.href = 'tel:+79503049007'}
                 >
                   <Icon name="Phone" size={20} className="mr-2" />
                   Позвонить сейчас
@@ -499,14 +499,14 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
               <Icon name="Shield" size={24} className="text-primary" />
-              <span className="text-xl font-bold">СанЭксперт</span>
+              <span className="text-xl font-bold">Охотники за насекомыми</span>
             </div>
-            <p className="text-white/70">© 2024 СанЭксперт. Все права защищены.</p>
+            <p className="text-white/70">© 2024 ООО «Дез-сервис». Все права защищены.</p>
             <div className="flex gap-4">
-              <a href="tel:+79991234567" className="hover:text-primary transition-colors">
+              <a href="tel:+79503049007" className="hover:text-primary transition-colors">
                 <Icon name="Phone" size={24} />
               </a>
-              <a href="mailto:info@sanexpert.ru" className="hover:text-primary transition-colors">
+              <a href="mailto:zhdanovrt@mail.ru" className="hover:text-primary transition-colors">
                 <Icon name="Mail" size={24} />
               </a>
             </div>
